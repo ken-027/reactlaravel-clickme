@@ -1,0 +1,53 @@
+@use '../config/variables' as var;
+
+.container {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: var.$space_10;
+  .caption {
+    text-align: center;
+    h1 {
+      font-size: 40px;
+    }
+    p {
+      font-size: 20px;
+    }
+  }
+  .card {
+    background-color: var.$secondary-color;
+    width: 100%;
+    max-width: 300px;
+    border-radius: var.$space_1;
+    border: 1px solid var.$border-color;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    font-size: 50px;
+    .detail {
+      padding: var.$space_4 var.$space_6;
+      font-size: 1.5em;
+      min-height: 200px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .title {
+      background-color: var.$border-color;
+      padding: var.$space_6;
+      font-weight: bold;
+      transition: var.$transition;
+      border-bottom: 1px solid var.$border-color;
+      &:hover {
+        background-color: var.$secondary-color;
+      }
+    }
+    .footer {
+      padding: var.$space_2;
+      border-top: 1px solid var.$border-color;
+    }
+  }
+}
