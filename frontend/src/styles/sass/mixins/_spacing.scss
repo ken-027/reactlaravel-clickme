@@ -1,0 +1,27 @@
+@mixin px($x) {
+  padding: {
+    left: $x;
+    right: $x;
+  }
+}
+
+@mixin py($y) {
+  padding: {
+    top: $y;
+    bottom: $y;
+  }
+}
+
+@mixin mx($x) {
+  margin: {
+    top: $x;
+    bottom: $x;
+  }
+}
+
+@mixin my($y) {
+  margin: {
+    top: $y;
+    bottom: $y;
+  }
+}

@@ -1,0 +1,21 @@
+@use '../config/variables' as var;
+@use '../mixins/spacing' as space;
+
+nav {
+  background-color: var.$primary-color;
+  color: var.$white;
+  display: flex;
+  justify-content: space-between;
+  padding: var.$space_2;
+  @include space.px(var.$space_6);
+  a {
+    font-size: 1.2rem;
+  }
+  ul {
+    display: flex;
+    gap: var.$space_3;
+  }
+  .btn {
+    background-color: var.$white !important;
+  }
+}

@@ -1,0 +1,19 @@
+/** @format */
+@use '../config/variables' as var;
+@use '../mixins/spacing' as space;
+
+.btn {
+  background-color: #fff;
+  border: 1px solid var.$primary-color;
+  border-radius: var.$space_6;
+  transition: var.$transition;
+  @include space.px(var.$space_2);
+  &:hover {
+    border: 1px solid var.$white !important;
+    color: var.$white;
+    background-color: var.$primary-color !important;
+  }
+  &.primary {
+    background-color: var.$red !important;
+  }
+}

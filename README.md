@@ -1,0 +1,2 @@
+# React x Laravel Application
+
