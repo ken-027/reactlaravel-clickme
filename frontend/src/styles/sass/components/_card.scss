@@ -21,12 +21,13 @@
     background-color: var.$secondary-color;
     width: 100%;
     max-width: 300px;
+    min-width: fit-content;
     border-radius: var.$space_1;
     border: 1px solid var.$border-color;
     display: flex;
     flex-direction: column;
     text-align: center;
-    font-size: 50px;
+    font-size: 70px;
     .detail {
       padding: var.$space_4 var.$space_6;
       font-size: 1.5em;
@@ -37,15 +38,19 @@
     }
     .title {
       background-color: var.$border-color;
+      font-size: 20px;
       padding: var.$space_6;
       font-weight: bold;
       transition: var.$transition;
       border-bottom: 1px solid var.$border-color;
+      color: #fff;
       &:hover {
         background-color: var.$secondary-color;
+        color: var.$border-color !important;
       }
     }
     .footer {
+      font-size: 14px;
       padding: var.$space_2;
       border-top: 1px solid var.$border-color;
     }

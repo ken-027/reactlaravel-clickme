@@ -1,21 +1,14 @@
 import { useState, useEffect } from 'react'
-import { IuseFetch } from '../ts-interface'
 
-const useFetch = <T>(
-  fetchAPI: (param: any) => Promise<any>,
-  storeState: (data: any) => void,
-  param?: T,
-): IuseFetch => {
+const useFetch = (endpoint: string, method: 'POST' | 'GET' = 'GET') => {
   const [loading, setLoading] = useState(true)
   const [error, setError] = useState(null)
   const [data, setData] = useState([])
 
   useEffect(() => {
-    fetchAPI(param)
-      .then((data: any) => {
-        setData(data)
-        storeState(data)
-      })
+    fetch(`/api/${endpoint}`, { method: method })
+      .then((response: any) => response.json())
+      .then((result: any) => setData(result))
       .catch((err: any) => setError(err))
       .finally(() => setLoading(false))
   }, [loading])

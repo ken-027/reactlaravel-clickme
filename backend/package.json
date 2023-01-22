@@ -3,7 +3,10 @@
     "scripts": {
         "dev": "vite",
         "build": "vite build",
-        "start": "php artisan serve --port=3174"
+        "start": "php artisan serve --port=5174",
+        "migrate": "php artisan migrate",
+        "generate-key": "php artisan key:generate",
+        "test": "php artisan test"
     },
     "devDependencies": {
         "axios": "^1.1.2",

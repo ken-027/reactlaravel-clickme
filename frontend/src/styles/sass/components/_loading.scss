@@ -1,0 +1,7 @@
+@use '../config/variables' as var;
+
+.loading {
+  background-color: var.$border-color;
+  position: fixed;
+  inset: 0;
+}
