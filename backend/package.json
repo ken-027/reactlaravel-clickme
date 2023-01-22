@@ -6,7 +6,8 @@
         "start": "php artisan serve --port=5174",
         "migrate": "php artisan migrate",
         "generate-key": "php artisan key:generate",
-        "test": "php artisan test"
+        "test": "php artisan test",
+        "install": "composer install"
     },
     "devDependencies": {
         "axios": "^1.1.2",

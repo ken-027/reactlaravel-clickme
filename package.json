@@ -7,8 +7,7 @@
     "start": "concurrently \"npm run client\" \"npm run server\"",
     "client": "npm run dev --prefix frontend",
     "server": "npm start --prefix backend",
-    "setup": "npm run generate-key --prefix backend && npm run migrate --prefix backend",
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "setup": "npm install --prefix frontend && npm run install --prefix backend && npm run generate-key --prefix backend && npm run migrate --prefix backend",
     "request-test": "npm run test --prefix backend"
   },
   "author": "ken@27",
